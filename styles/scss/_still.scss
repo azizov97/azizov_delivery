@@ -1,0 +1,35 @@
+.still {
+  @extend %headstills;
+
+  .accordion {
+    width: 70%;
+
+    button {
+      @extend %flex-center;
+      gap: 0.6rem;
+      span {
+        background: $color-primary;
+        text-align: center;
+        color: $color-white;
+        border-radius: 50%;
+        font-size: 1.3rem;
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+    }
+  }
+
+  .clients {
+    padding-top: 3rem;
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 120%;
+    color: $color-black;
+  }
+
+  .firms {
+    padding-top: 3rem;
+    @extend %flex-center;
+    gap: 3rem;
+  }
+}

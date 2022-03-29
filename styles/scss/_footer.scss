@@ -1,0 +1,55 @@
+.footer {
+  margin-top: 2rem;
+  @extend %flex-center;
+  justify-content: space-around;
+  text-align: start;
+
+  .footer-link {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    p {
+      margin-top: 1rem;
+      opacity: 0.8;
+      font-size: 1rem;
+    }
+
+    h4 {
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: $color-black;
+    }
+
+    a {
+      opacity: 0.8;
+      font-weight: normal;
+      font-size: 1rem;
+      line-height: 170%;
+      display: flex;
+      align-items: center;
+      color: $color-black;
+      text-decoration: none;
+    }
+
+    .socials {
+      margin-top: 1rem;
+      @extend %flex-center;
+      gap: 1.5rem;
+    }
+  }
+}
+
+// CONCLUSION
+
+.conclusion {
+  @extend %flex-center;
+  margin-top: 2rem;
+  background-color: $color-primary;
+  height: 7vh;
+  h3 {
+    font-size: 1rem;
+    color: $color-white;
+  }
+}

@@ -1,0 +1,46 @@
+.navbar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: space-between;
+
+  .navs {
+    @extend %flex-center;
+    gap: 1rem;
+  }
+
+  .hum-menu {
+    display: none;
+  }
+
+  & li {
+    @extend %flex-center;
+  }
+
+  & a {
+    font-weight: bold;
+    font-size: 1rem;
+    color: $color-black;
+    text-decoration: none;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+
+  .signin {
+    @include btnForm();
+  }
+
+  @media (max-width: 768px) {
+    .navs {
+      display: none;
+    }
+
+    .hum-menu {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+  }
+}

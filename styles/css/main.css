@@ -1,18 +1,364 @@
-/* Error: @extend may only be used within style rules.
- *    ,
- * 12 | @extend %flex-center;
- *    | ^^^^^^^^
- *    '
- *   scss\_utils.scss 12:1  @import
- *   scss\main.scss 2:9     root stylesheet */
+@font-face {
+  font-family: "Red Hat Display";
+  src: url(../../assets/fonts/red_hat_display/RedHatDisplay-Medium.woff2);
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Red Hat Display ";
+  src: url(../../assets/fonts/red_hat_display/RedHatDisplay-Regular.woff2);
+  font-weight: 400;
+  font-style: normal;
+}
+.conclusion, .footer .footer-link .socials, .footer, .application .apps .app, .application .apps, .application .accordion button, .application, .company .cards, .hear .partner, .hear .hear-content, .still .firms, .still .accordion button, .ambassador, .chooseus .choose-cards .card, .info .boxes .box, .info, .navbar li, .navbar .navs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: @extend may only be used within style rules.\a    \2577 \a 12 \2502  @extend %flex-center;\d\a    \2502  ^^^^^^^^\a    \2575 \a   scss\\_utils.scss 12:1  @import\a   scss\\main.scss 2:9     root stylesheet";
+.hear, .still, .chooseus {
+  text-align: center;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+* {
+  font-family: "Red Hat Display";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 0 2rem;
+}
+
+.title h2 {
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 140%;
+  color: #444b51;
+  text-align: center;
+}
+.title p {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 120%;
+  color: #444b51;
+}
+
+.btn {
+  border-radius: 5rem;
+  padding: 1rem 3rem;
+  font-size: 1rem;
+}
+
+.navbar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .navs {
+  gap: 1rem;
+}
+.navbar .hum-menu {
+  display: none;
+}
+.navbar a {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #444b51;
+  text-decoration: none;
+}
+.navbar a:hover {
+  color: #e24329;
+}
+.navbar .signin {
+  color: #444b51;
+  border: 1px solid #444b51;
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0.7rem 1.6rem;
+  border-radius: 2rem;
+}
+.navbar .signin:hover {
+  background-color: #e24329;
+  color: #fff;
+  border: none;
+}
+@media (max-width: 768px) {
+  .navbar .navs {
+    display: none;
+  }
+  .navbar .hum-menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 2rem;
+  background: #e24329;
+  padding: 4rem;
+}
+.hero .left h1 {
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 130%;
+  color: #fff;
+}
+.hero .left p {
+  padding-top: 0.5rem;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 110%;
+  color: #ffffff;
+  opacity: 0.7;
+}
+.hero .left .input-group {
+  padding-top: 1rem;
+}
+.hero .right img {
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .hero .hero {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+.info .boxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+  gap: 2rem;
+}
+.info .boxes .box {
+  margin-top: -30px;
+  gap: 1rem;
+  border: 1px solid #fff;
+  background: #fff;
+  box-shadow: 0px 22px 40px rgba(142, 108, 154, 0.1), 0px 8.47407px 12.7407px rgba(142, 108, 154, 0.0607407), 0px 1.79259px 3.25926px rgba(142, 108, 154, 0.0392593);
+  border-radius: 1rem;
+  padding: 0.3rem;
+  font-weight: 400;
+  font-size: 0.8rem;
+  color: #444b51;
+  transition: all 0.4s;
+}
+.info .boxes .box:hover {
+  transform: scale(1.1);
+}
+
+.chooseus .choose-cards {
+  display: grid;
+  grid-template: 1fr 1fr 1fr/1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  gap: 1rem;
+}
+.chooseus .choose-cards .card {
+  padding: 2rem;
+  border-radius: 1rem;
+  transition: all 0.4s;
+}
+.chooseus .choose-cards .card img {
+  width: 30%;
+}
+.chooseus .choose-cards .card:hover {
+  transform: scale(1.03);
+}
+
+.ambassador {
+  margin-top: 1rem;
+}
+.ambassador .left img {
+  width: 100%;
+}
+.ambassador .right h2 {
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 130%;
+  color: #444b51;
+}
+.ambassador .right p {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 140%;
+  color: #444b51;
+}
+
+.still .accordion {
+  width: 70%;
+}
+.still .accordion button {
+  gap: 0.6rem;
+}
+.still .accordion button span {
+  background: #e24329;
+  text-align: center;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.still .clients {
+  padding-top: 3rem;
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 120%;
+  color: #444b51;
+}
+.still .firms {
+  padding-top: 3rem;
+  gap: 3rem;
+}
+
+.hear .hear-content {
+  gap: 2rem;
+  text-align: start;
+}
+.hear .carousel span {
+  color: #e24329;
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: 0.5rem;
+}
+.hear .carousel h2 {
+  font-weight: 700;
+  font-size: 2rem;
+  color: #e24329;
+}
+.hear .partner {
+  margin-top: 2rem;
+  flex-direction: column;
+  background: #fcecea;
+  padding: 2rem;
+  border: 1px solid #e24329;
+  border-radius: 2rem;
+}
+.hear .partner .btn {
+  color: #e24329;
+}
+
+.company {
+  margin-top: 2rem;
+}
+.company .cards {
+  gap: 2rem;
+}
+.company .card-body img {
+  width: 100%;
+}
+
+.application {
+  gap: 2rem;
+  margin-top: 2rem;
+  background-color: #fdf7e8;
+  padding: 2rem;
+}
+.application h2 {
+  text-align: start;
+}
+.application .accordion {
+  width: 100%;
+}
+.application .accordion button {
+  gap: 0.6rem;
+}
+.application .accordion button span {
+  background: #e24329;
+  text-align: center;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.application .apps {
+  margin-top: 1rem;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+.application .apps .app {
+  gap: 1rem;
+  border: 2px solid #444b51;
+  text-align: center;
+  border-radius: 1rem;
+  padding: 0.6rem 1rem;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+.application .apps .app i {
+  font-size: 2rem;
+}
+.application .apps .app h4 {
+  font-size: 1rem;
+}
+.application .apps .app:hover {
+  transform: scale(1.2);
+}
+.application .right img {
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.footer {
+  margin-top: 2rem;
+  justify-content: space-around;
+  text-align: start;
+}
+.footer .footer-link {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.footer .footer-link p {
+  margin-top: 1rem;
+  opacity: 0.8;
+  font-size: 1rem;
+}
+.footer .footer-link h4 {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #444b51;
+}
+.footer .footer-link a {
+  opacity: 0.8;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 170%;
+  display: flex;
+  align-items: center;
+  color: #444b51;
+  text-decoration: none;
+}
+.footer .footer-link .socials {
+  margin-top: 1rem;
+  gap: 1.5rem;
+}
+
+.conclusion {
+  margin-top: 2rem;
+  background-color: #e24329;
+  height: 7vh;
+}
+.conclusion h3 {
+  font-size: 1rem;
+  color: #fff;
 }

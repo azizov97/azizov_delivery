@@ -1,0 +1,13 @@
+.company {
+  margin-top: 2rem;
+
+  .cards {
+    @extend %flex-center;
+    gap: 2rem;
+  }
+  .card-body {
+    img {
+      width: 100%;
+    }
+  }
+}
