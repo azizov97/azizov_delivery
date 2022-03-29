@@ -1,0 +1,18 @@
+/* Error: @extend may only be used within style rules.
+ *    ,
+ * 12 | @extend %flex-center;
+ *    | ^^^^^^^^
+ *    '
+ *   scss\_utils.scss 12:1  @import
+ *   scss\main.scss 2:9     root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: @extend may only be used within style rules.\a    \2577 \a 12 \2502  @extend %flex-center;\d\a    \2502  ^^^^^^^^\a    \2575 \a   scss\\_utils.scss 12:1  @import\a   scss\\main.scss 2:9     root stylesheet";
+}

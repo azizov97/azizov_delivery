@@ -1,0 +1,31 @@
+$color-primary: #263238;
+$color-secondary: #8f95a5;
+$color-black: #000;
+$color-white: #fff;
+
+%flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+// chaqirish
+@extend %flex-center;
+
+@mixin btnForm {
+  color: $color-text-btn;
+  background: $color-btn;
+  border-radius: 6px;
+  width: 100%;
+  font-size: 2rem;
+  padding: 0.8rem 1.5rem;
+  text-align: center;
+  text-decoration: none;
+
+  &:hover {
+    background-color: #112caf;
+    color: $color-text-btn;
+    text-decoration: none;
+  }
+}
+// chaqirish
+@include btnForm();
